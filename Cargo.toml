@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2024"
 description = "A tiny tool to auto-augment prompts programmatically"
 license = "MIT"
-repository = "https://github.com/hamzeghalebi/promptune"
+repository = "https://github.com/RustSandbox/promptune"
 keywords = ["prompt", "llm", "augment", "ai"]
 categories = ["text-processing"]
 

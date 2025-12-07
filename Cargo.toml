@@ -1,10 +1,11 @@
 [package]
 name = "promptune"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2024"
 description = "A tiny tool to auto-augment prompts programmatically"
 license = "MIT"
 repository = "https://github.com/RustSandbox/promptune"
+documentation = "https://docs.rs/promptune"
 keywords = ["prompt", "llm", "augment", "ai"]
 categories = ["text-processing"]
 

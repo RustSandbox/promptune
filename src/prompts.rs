@@ -74,8 +74,8 @@ impl Prompter {
 }
 
 async fn refine(prompt: &str, config: &Config) -> Result<String> {
-    let client = gemini::Client::new(&config.api_key)
-        .map_err(|e| Error::MissingEnvVar(e.to_string()))?;
+    let client =
+        gemini::Client::new(&config.api_key).map_err(|e| Error::MissingEnvVar(e.to_string()))?;
 
     let agent = client
         .agent(&config.model)

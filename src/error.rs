@@ -7,10 +7,16 @@ pub enum Error {
     Io(#[from] std::io::Error),
 
     #[error("LLM: {0}")]
-    Llm(#[from] rig::completion::PromptError),
+    Llm(#[from] Box<rig::completion::PromptError>),
 
     #[error("Missing env var: {0}")]
     MissingEnvVar(String),
+}
+
+impl From<rig::completion::PromptError> for Error {
+    fn from(e: rig::completion::PromptError) -> Self {
+        Error::Llm(Box::new(e))
+    }
 }
 
 /// Library result type.

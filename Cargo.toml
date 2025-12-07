@@ -1,9 +1,18 @@
 [package]
-name = "untitled"
+name = "promptune"
 version = "0.1.0"
 edition = "2024"
+description = "A tiny tool to auto-augment prompts programmatically"
+license = "MIT"
+repository = "https://github.com/hamzeghalebi/promptune"
+keywords = ["prompt", "llm", "augment", "ai"]
+categories = ["text-processing"]
 
 [dependencies]
-rig-core = { version = "0.25.0", features = ["all"] }
+rig-core = { version = "0.26.0", features = ["all"] }
+thiserror = "2.0.17"
 tokio = { version = "1.48.0", features = ["full"] }
-tracing = "0.1.43"
+
+[[example]]
+name = "basic"
+path = "examples/basic.rs"
